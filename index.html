@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlockedIN (BIN)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1A120B; /* Deep charcoal with earthy brown tint */
+      --card-bg: #3C2A21; /* Soft terracotta */
+      --text: #F5F5DC; /* Warm off-white */
+      --muted: #D4A59A; /* Soft beige */
+      --accent: #FF9933; /* Saffron orange */
+      --accent-hover: #CC7A00; /* Deeper saffron for hover */
+      --gold-accent: #FFD700; /* Golden yellow for borders/highlights */
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+
+    h1, h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      background: var(--accent);
+      color: var(--text);
+      text-align: center;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .outline-btn {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .outline-btn:hover {
+      background: var(--accent);
+      color: var(--text);
+    }
+
+    .contract-box {
+      background: #2E1F17; /* Darker terracotta shade */
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      border: 1px solid var(--gold-accent); /* Gold border for richness */
+    }
+
+    .contract-box code {
+      background: #000;
+      padding: 0.5rem;
+      display: inline-block;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      border: none;
+      color: var(--text);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+
+    .explorer-link {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--gold-accent); /* Gold for links */
+      text-decoration: underline;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .feature-icon {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .tweet {
+      background: #4A352B; /* Slightly lighter terracotta for contrast */
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-top: 0.5rem;
+    }
+
+    .tweet p {
+      text-align: left;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2rem;
+    }
+
+    .logo {
+      width: 60px;
+      margin: 0 auto 1rem;
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      body {
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .container {
+        max-width: 700px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="BlockedIN60x60.png" alt="BlockedIN Logo" />
+    </header>
+
+    <div class="section">
+      <h1>Pump.fun Blocked India?<br><span>Meme It with BlockedIN!</span></h1>
+      <p>Turned FOMO into a token – for everyone who’s been rugged, blocked, or just wants to laugh at the chaos.</p>
+      <a class="btn" href="https://raydium.io/swap/" target="_blank">Buy on Raydium</a>
+      <a class="btn outline-btn" href="https://x.com/BlockedIN_meme" target="_blank">Join the Meme on X</a>
+    </div>
+
+    <div class="section contract-box">
+      <div>
+        <strong>Contract Address</strong><br /><br />
+        <code id="contract">EiWqzALh4n5YDXyey7bojyWZw2Sxv7xVPZeihMoX7AFD</code>
+        <button class="copy-btn" onclick="copyContract()">Copy</button>
+        <a class="explorer-link" href="https://solscan.io/token/EiWqzALh4n5YDXyey7bojyWZw2Sxv7xVPZeihMoX7AFD" target="_blank">View on Solana Explorer</a>
+      </div>
+    </div>
+
+    <div class="section feature">
+      <div class="feature-icon">🌍</div>
+      <div>
+        <strong>Born from Real-Time Drama</strong>
+        <p>Irony, regulation memes, and global FUD – now tradable with $BIN!</p>
+      </div>
+    </div>
+
+    <div class="section feature">
+      <div class="feature-icon">😂</div>
+      <div>
+        <strong>Own the Chaos</strong>
+        <p>Why just watch the crypto game when you can meme it? $BIN is your ticket to the joke.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Community Meme Voices</h2>
+      <div class="tweet">
+        <strong>@CryptoChaosKing</strong><br />
+        <p>"India got blocked by Pump.fun, so I’m all in on $BIN – let’s meme this FUD! 🚨"</p>
+      </div>
+      <div class="tweet">
+        <strong>@MemeTrader99</strong><br />
+        <p>"$BIN is the ultimate rug pull revenge – laughing all the way to the moon! 🌙"</p>
+      </div>
+      <p><a href="https://x.com/BlockedIN_meme" target="_blank" style="color: var(--gold-accent)">Join the conversation on X →</a></p>
+    </div>
+
+    <div class="section">
+      <h2>Roadmap of Chaos</h2>
+      <p>The $BIN community is cooking up more memes and irony – stay tuned for the next FUD to trade!</p>
+    </div>
+
+    <div class="section">
+      <h2>Join the Meme Revolution</h2>
+      <p>In the crypto game, if you can’t join ‘em… meme ‘em. Be part of the $BIN movement!</p>
+      <a class="btn" href="https://t.me/BlockedIN_meme" target="_blank">Join Telegram</a>
+      <a class="btn outline-btn" href="https://dexscreener.com/solana/EiWqzALh4n5YDXyey7bojyWZw2Sxv7xVPZeihMoX7AFD" target="_blank">Buy $BIN</a>
+    </div>
+
+    <footer>
+      <img src="BlockedIN30x30.png" alt="Footer Logo" /><br />
+      BlockedIN (BIN)<br />
+      <a href="https://x.com/BlockedIN_meme" style="color: var(--muted);">X</a> |
+      <a href="https://t.me/BlockedIN_meme" style="color: var(--muted);">Telegram</a><br />
+      <small>Not financial advice. Invest at your own risk. $BIN is a community-driven meme project.<br>© 2025 BlockedIN. All rights reserved.</small>
+    </footer>
+  </div>
+
+  <script>
+    function copyContract() {
+      const contractText = document.getElementById("contract").textContent;
+      navigator.clipboard.writeText(contractText).then(() => {
+        alert("Contract address copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
